@@ -7,3 +7,24 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 admin = AdminCreateService.new.call
 puts  "admin email: " << admin.email # only for display
+
+PRODUCT_COUNT = 20
+MAX_CATEGORY = 3
+CATEGORIES = Faker::Base.fetch_all('commerce.department').each do |title|
+  Category.create(title: title)
+end
+
+PRODUCT_COUNT.each do |item|
+  title = ' '
+  loop do
+    title = Faker::Commerce.product_name
+    break unless Product?exists(title: title) #test if product with that title exist if it does CONTINUE if it does not then break
+  end
+  product = Product.new(
+    title: title,
+    description: Faker::Lorem.sentences,
+    price: Faker::Commerce.price
+  )
+  product.save
+  puts product;
+end

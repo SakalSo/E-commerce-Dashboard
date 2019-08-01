@@ -1,9 +1,9 @@
 class CreateOrders < ActiveRecord::Migration[5.1]
   def change
     create_table :orders do |t|
-      t.references :product
-      t.integer :quantity
-      t.decimal :price
+      t.string :first_name
+      t.string :last_name
+      t.decimal :sub_total
 
       t.timestamps
     end

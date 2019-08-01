@@ -11,10 +11,13 @@
   <%end%>
   <body class="bg-dark">
     <div id="page-top">
-    <%if params[:controller] != "devise/sessions"%>
-      <%=render "shared/admin/navbar"%>
-    <%end%>
+        <%if params[:controller] != "devise/sessions"%>
+          <%=render "shared/admin/navbar"%>
+          <div id="wrapper">
+          <%=render "shared/admin/sidebar"%>
+        <%end%>
         <%= yield %>
+      </div>
     </div>
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
