@@ -1,6 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+<<<<<<< HEAD
   price: 9.99
   quantity: 1
   order: one
@@ -11,3 +12,15 @@ two:
   quantity: 1
   order: two
   product: two
+=======
+  product: one
+  order: one
+  quantity: 1
+  price: 9.99
+
+two:
+  product: two
+  order: two
+  quantity: 1
+  price: 9.99
+>>>>>>> 9f26348f6935e2e8f207a45cb260f85f1a77bbe1

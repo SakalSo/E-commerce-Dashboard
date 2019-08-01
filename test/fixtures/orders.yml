@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  Product: 
-  quantity: 1
-  price: 9.99
+  first_name: MyString
+  last_name: MyString
+  sub_total: 9.99
 
 two:
-  Product: 
-  quantity: 1
-  price: 9.99
+  first_name: MyString
+  last_name: MyString
+  sub_total: 9.99

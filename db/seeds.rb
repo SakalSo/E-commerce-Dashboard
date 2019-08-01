@@ -8,7 +8,6 @@
 admin = AdminCreateService.new.call
 puts  "admin email: " << admin.email # only for display
 
-
 PRODUCT_COUNT = 20
 
 MAX_CATEGORIES = 3
@@ -19,10 +18,9 @@ end
 
 PRODUCT_COUNT.times do |item|
   title = ' '
-
   loop do
     title = Faker::Commerce.product_name
-    break unless Product.exists?(title: title)
+    break unless Product.exists?(title: title) #test if product with that title exist if it does CONTINUE if it does not then break
   end
 
   product = Product.new(
@@ -41,14 +39,7 @@ PRODUCT_COUNT.times do |item|
   product.categories.each do |category|
     puts "Category ID : #{category.id}"
   end
-  
+
   puts " "
 
 end
-
-# 100.times do
-#   Product.create!([{
-#     title: Faker::Commerce.product_name
-#     }])
-#
-# end
