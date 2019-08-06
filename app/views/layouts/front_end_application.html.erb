@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Authenticate</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'front_end_application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <%=link_to "home",home_path%>
+    <%=yield%>
+    <%= javascript_include_tag 'front_end_application', 'data-turbolinks-track': 'reload' %>
+  </body>
+</html>
